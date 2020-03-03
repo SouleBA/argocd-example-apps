@@ -2,7 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook-ui
-  version: "0.0.1"
+   labels:
+    environment: integration
+    version: "0.0.1"
 spec:
   replicas: 2
   revisionHistoryLimit: 3
